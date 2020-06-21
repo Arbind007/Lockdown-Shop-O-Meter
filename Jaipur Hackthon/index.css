@@ -1,0 +1,57 @@
+body{
+	background-color: #D6ED17FF;
+    display:flex;
+
+}
+
+.hen{
+padding-top: 600px;
+padding-right: 200px;
+
+}
+
+.hen button{
+	height: 50px;
+	display:inline-block;
+	opacity: 0;
+	font-family: garamond,serif;
+	background-color: #606060FF;
+	color: #D6ED17FF;
+	font-size: 20px;
+	padding-top: 0px;
+	animation-name: btn;
+	animation-duration: 3s;
+	animation-delay: 0.5s ;
+	animation-fill-mode: forwards;
+	transition-property: transform; 
+	transition-duration: 1.5s;
+
+}
+
+.hen button a{
+   color: #D6ED17FF;
+}
+.hen button:hover {
+  transform: rotateY(360deg);
+}
+
+@keyframes btn{
+0% {opacity: 0}
+100% {opacity: 1}
+}
+
+.bat{
+animation-name: head;
+font-family: garamond,serif;
+color: #606060FF;
+padding-top: 0px;
+padding-left: 400px;
+animation-duration: 2s;
+position: relative;
+animation-fill-mode: forwards;
+}
+
+@keyframes head{
+	0%{top: -50px}
+	100%{top: 100px}
+}

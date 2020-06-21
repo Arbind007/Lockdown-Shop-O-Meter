@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: 
+#606060FF;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #D6ED17FF;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #D6ED17FF;
+  height: 1200px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #606060FF;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<header>
+  <h2><div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search" id="myInput">
+      <button type="submit">Submit</button>
+    </form>
+  </div></h2>
+	<p align= center></p>
+</header>
+
+<section>
+  <article>
+<table align=centre border=4>
+        <thead>
+        <tr>
+            <th>City</th>
+            <th>Shop Name</th>
+            <th>Area</th>
+            <th>Contact</th>
+        </tr>
+      </thead>
+        <tbody id="myTable">
+        <tr>
+            <th>Mumbai</th>
+            <th>Rakhangi Genera Stores</th>
+            <th>Worli</th>
+            <th>022 2498 1522</th>
+        </tr>
+        <tr>
+            <th >Mumbai </th>
+            <th>Phoenix MArketcity</th>
+            <th>Kurla West</th>
+            <th>022 6180 1011</th>
+        </tr>
+        <tr>
+            <th >Mumbai </th>
+            <th>Faishon Gate</th>
+            <th>Churchgate</th>
+            <th>08318138591</th>
+        </tr>
+        <tr>
+            <th >Mumbai </th>
+            <th>RC Mall</th>
+            <th>Ghatkopar West</th>
+            <th>-</th>
+        </tr>
+        <tr>
+            <th >Mumbai </th>
+            <th>High Street Phonix</th>
+            <th>Lower Parel</th>
+            <th>022 4333 9999</th>
+        </tr>
+        <tr>
+            <th >Ahmedabad</th>
+            <th>Ahmedabad One Mall</th>
+            <th>Vastrapur</th>
+            <th>079 4019 3672</th>
+        </tr>
+        <tr>
+            <th >Ahmedabad </th>
+            <th>Madhav Laser Tech</th>
+            <th>Naranpura</th>
+            <th>090331 36738</th>
+        </tr>
+        <tr> 
+        <th >Ahmedabad </th>
+        <th>Deepika Selection</th>
+        <th>Navrangpura</th>
+        <th>096870 85095</th>
+        </tr>
+        <tr>
+            <th >Ahmedabad </th>
+            <th>Iscon Mega Mall</th>
+            <th>Bodakdev</th>
+            <th>-</th>
+        </tr>
+        <tr>
+            <th >Delhi</th>
+            <th>Pacific Mall Tagore Garden</th>
+            <th>Tilak Nagar</th>
+            <th>01140903000</th>
+        </tr>
+        <tr>
+            <th >Delhi </th>
+            <th>Select Citywalk</th>
+            <th>Pushp Nagar</th>
+            <th>01142114200</th>
+        </tr>
+        <tr>
+            <th >Delhi </th>
+            <th>DLF Promenade</th>
+            <th>Vasant Kunj</th>
+            <th>01146104466</th>
+        </tr>
+        <tr>
+            <th >Delhi </th>
+            <th>Central Cottage Industries Emporium</th>
+            <th>HC Mathur Lane</th>
+            <th>011 23320439</th>
+        </tr>
+        </tbody>
+</table>
+</article><nav></nav><nav></nav><nav></nav><nav></nav> 
+</section>
+
+<footer class="text-gray-700 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+     
+      <span class="ml-3 text-xl">Shop-O-Meter</span>
+    </a>
+    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 Team Arsenal Owned—
+      <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@arbind</a>
+    </p>
+    
+  </div>
+</footer>
+
+</body>
+</html>
